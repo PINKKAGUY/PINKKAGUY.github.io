@@ -1,0 +1,62 @@
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.dropdown-menu');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Transmuteuse - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LA TRANSMUTEUSE</h1>
+        
+        <!-- Icône de menu (visible sur mobile uniquement) -->
+        <span class="menu-icon" onclick="toggleMenu()">☰</span>
+        
+        <!-- Menu principal (visible sur les écrans larges) -->
+        <nav class="main-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                <li><a href="art-stories.html">ART & STORIES</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="why-me.html">WHY ME</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Menu déroulant (visible sur les écrans petits) -->
+        <nav class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="creative-process.html">CREATIVE PROCESS</a></li>
+                <li><a href="art-stories.html">ART & STORIES</a></li>
+                <li><a href="benefits.html">BENEFITS</a></li>
+                <li><a href="why-me.html">WHY ME</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h2>Meet La Transmuteuse</h2>
+        <p>I'm La Transmuteuse, a spiritual artist and energetic practitioner...</p>
+
+        <h3>My mission</h3>
+        <p>To raise vibrations and facilitate profound personal transformation.</p>
+
+        <h3>Energy Transmutation</h3>
+        <p>The word ‘transmutation’ comes from the Latin ‘transmutare’, meaning to change form…</p>
+    </section>
+</body>
+</html>

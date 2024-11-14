@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'CoutureBold';
+    src: url('fonts/couture-bld.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Style global */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'CoutureBold', sans-serif;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-menu ul li a:hover {
+    color: #b3a580;
+}
+
+/* Dropdown menu for mobile */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    color: #b3a580;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-menu {
+        display: none;
+    }
+
+    .dropdown-menu.active {
+        display: flex;
+    }
+}
+
+/* Section Hero */
+.hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 74vh;
+    background-image: url('backgroundaccueil.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.overlay h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 16px;
+    margin-bottom: 100px;
+}
+
+/* Button */
+.button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 30px;
+    font-weight: 900;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #a3946f;
+}
+
+/* Sections principales */
+section {
+    padding: 60px 0;
+}
+
+.intro, .about, .creative-process, .art-stories, .benefits, .why-me, .contact {
+    text-align: center;
+}
+
+.intro h3, .about h2, .creative-process h2, .art-stories h2, .benefits h2, .why-me h2, .contact h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.intro p, .about p, .creative-process p, .art-stories p, .benefits p, .why-me p, .contact p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Gallery and testimonials */
+.gallery, .testimonials {
+    margin-top: 40px;
+}
+
+.testimonials p {
+    font-style: italic;
+    color: #444;
+}
+
+/* Contact form */
+.contact form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #b3a580;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button[type="submit"]:hover {
+    background-color: #a3946f;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+    .main-menu {
+        display: flex;
+    }
+}
+
+/* Highlights section */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.highlight-item {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-end; /* Aligne le contenu en bas */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Assombrir légèrement l'image de fond pour améliorer la lisibilité du texte */
+.highlight-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* Centrer le contenu et aligner le bouton en bas */
+.highlight-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Placer le bouton en bas de .highlight-content */
+.highlight-content .button {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 20px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Pousse le bouton vers le bas */
+}
+
+.highlight-content .button:hover {
+    background-color: #a3946f;
+}
+
+/* Hover effect for highlight items */
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
