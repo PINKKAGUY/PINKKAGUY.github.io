@@ -291,19 +291,18 @@ ul li {
 
 .highlight-item {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px; /* Taille maximale égale pour chaque élément */
     aspect-ratio: 1 / 1;
     background-size: cover;
     background-position: center;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: flex-end; /* Aligne le contenu en bas */
+    align-items: flex-end;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 /* Assombrir légèrement l'image de fond pour améliorer la lisibilité du texte */
 .highlight-item::before {
     content: "";
@@ -332,7 +331,7 @@ ul li {
 .highlight-content .button {
     background-color: #ffffff;
     color: #000000;
-    padding: 10px 20px;
+    padding: 5px 10px;
     font-weight: 700;
     text-align: center;
     border-radius: 10px;
@@ -350,4 +349,27 @@ ul li {
 .highlight-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.0);
+
+}
+.highlight-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.highlight-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .highlights {
+        flex-direction: column; /* Passe en une seule colonne */
+        gap: 10px;
+    }
+
+    .highlight-item {
+        max-width: 100%; /* Prend toute la largeur disponible */
+        width: 100%;
+    }
 }
