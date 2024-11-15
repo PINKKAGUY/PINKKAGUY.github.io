@@ -673,23 +673,40 @@ footer {
     }
 }
 
-.grid-container {
+/* Container de la grille */
+.grid-container2 {
+    background-color:#ffffff;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Assure deux colonnes de taille flexible */
-    justify-content: center; /* Centre l'ensemble du contenu de la grille horizontalement */
-    align-items: center; /* Centre verticalement */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Deux colonnes de taille flexible */
+    justify-content: center; /* Centre la grille horizontalement */
+    align-items: center; /* Centre les items verticalement */
     gap: 20px; /* Espace entre les items */
+    padding: 10px; /* Ajout d'une marge intérieure pour plus de confort visuel */
 }
 
-.grid-item {
+/* Items de la grille */
+.grid-item2 {
+    background-color: #ffffff;
+    border-color: #000000;
+    border-style: groove;
     text-align: center; /* Centre le texte dans chaque item */
-    max-width: 400px; /* Limite la largeur des items pour une meilleure lisibilité */
-    margin: 0 auto; /* Centre chaque item individuellement dans sa colonne */
+    max-width: 1600px; /* Largeur maximale pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre chaque item individuellement */
+    height: 200px; /* Hauteur des items, ajustez selon vos besoins */
+    box-sizing: border-box; /* Assure que padding et bordures sont inclus dans les dimensions */
 }
 
-/*@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Une seule colonne sur les écrans plus petits */
+/* Responsivité pour les écrans de taille inférieure ou égale à 768px */
+@media (max-width: 768px) {
+    .grid-container2 {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+        gap: 15px; /* Réduit l'espace entre les items pour les petits écrans */
+    }
+
+    .grid-item2 {
+        max-width: 100%; /* Laisse les items occuper toute la largeur disponible */
+        height: auto; /* Ajuste automatiquement la hauteur en fonction du contenu */
     }
 }
+
 
