@@ -675,20 +675,21 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, auto); /* Assure deux colonnes de taille automatique */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement si nécessaire */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Assure deux colonnes de taille flexible */
+    justify-content: center; /* Centre l'ensemble du contenu de la grille horizontalement */
+    align-items: center; /* Centre verticalement */
     gap: 20px; /* Espace entre les items */
-  }
-  
-  .grid-item {
+}
+
+.grid-item {
     text-align: center; /* Centre le texte dans chaque item */
-    max-width: 400px; /* Optionnel, limite la largeur des items pour une meilleure lisibilité */
-  }
-  
+    max-width: 400px; /* Limite la largeur des items pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre chaque item individuellement dans sa colonne */
+}
 
 @media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Une seule colonne sur les écrans plus petits */
-  }
+    .grid-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur les écrans plus petits */
+    }
 }
+
