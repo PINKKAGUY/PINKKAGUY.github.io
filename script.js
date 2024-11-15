@@ -77,7 +77,7 @@ leftArrow.addEventListener('click', scrollLeft);
 rightArrow.addEventListener('click', scrollRight);
 
 // Défilement automatique toutes les 10 secondes
-setInterval(scrollRight, 10000); // 10000 ms = 10 secondes
+setInterval(scrollRight, 5000); // 10000 ms = 10 secondes
 
 // Initialisation
 cloneCarouselItems();
