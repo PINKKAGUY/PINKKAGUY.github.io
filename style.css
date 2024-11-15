@@ -697,13 +697,13 @@ footer {
 }
 
 /* Responsivité pour les écrans de taille inférieure ou égale à 768px */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .grid-container2 {
         grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
         gap: 15px; /* Réduit l'espace entre les items pour les petits écrans */
     }
 
-    .grid-item2 {
+/*    .grid-item2 {
         max-width: 100%; /* Laisse les items occuper toute la largeur disponible */
         height: auto; /* Ajuste automatiquement la hauteur en fonction du contenu */
     }
