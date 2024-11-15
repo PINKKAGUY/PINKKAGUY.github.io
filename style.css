@@ -687,7 +687,7 @@ footer {
     margin: 0 auto; /* Centre chaque item individuellement dans sa colonne */
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr; /* Une seule colonne sur les écrans plus petits */
     }
