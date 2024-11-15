@@ -155,6 +155,20 @@ header h1 {
     background-repeat: no-repeat;
     color: #ffffff;
 }
+
+.herobenefites {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 74vh;
+    background-image: url('benef.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
 /* Mise à jour de l'overlay pour aligner le contenu en bas */
 .overlay {
     background-color: rgba(0, 0, 0, 0);
