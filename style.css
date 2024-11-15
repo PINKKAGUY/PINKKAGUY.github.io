@@ -271,8 +271,8 @@ ul li {
 .contact button[type="submit"] {
     margin-top: 20px;
     padding: 10px;
-    background-color: #ffffff;
-    color: #fff;
+    background-color: #a3946f;
+    color: #000000;
     font-weight: 700;
     border: none;
     cursor: pointer;
@@ -809,4 +809,33 @@ footer {
         max-width: 100%; /* Prend toute la largeur disponible */
         width: 100%;
     }
+/* Bouton */
+.bouton1 .button1 {
+    background-color: #000000; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    padding: 15px 30px; /* Espacement intérieur */
+    font-weight: 900; /* Poids de la police */
+    font-size: 16px; /* Taille de la police */
+    text-align: center; /* Alignement du texte */
+    border-radius: 10px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de pointeur */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition pour les interactions */
+    display: inline-block; /* Permet le centrage */
+    width: 220px; /* Largeur fixe du bouton */
+    max-width: 100%; /* Ajuste au conteneur */
+    margin: 0 auto; /* Centre horizontalement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    text-transform: uppercase; /* Texte en majuscules */
+}
 
+.bouton1 .button1:hover {
+    background-color: #a3946f; /* Couleur au survol */
+    transform: scale(1.05); /* Légère augmentation de taille */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Accentuation de l'ombre */
+}
+
+.bouton1 .button1:active {
+    background-color: #7d6c51; /* Couleur au clic */
+    transform: scale(0.95); /* Réduction légère */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Réduction de l'ombre */
+}
