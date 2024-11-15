@@ -129,6 +129,7 @@ header h1 {
     position: relative;
     background-repeat: no-repeat;
     color: #ffffff;
+    background-color: #ffffff;
 }
 .heroabout {
     display: flex;
@@ -402,7 +403,7 @@ ul li {
 .creative-process {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 .creative-process h2,
@@ -580,7 +581,7 @@ footer {
 
 .grid-item img {
     width: 100%;
-    height: 150px; /* Réduire la hauteur de l’image */
+    height: 500px; /* Réduire la hauteur de l’image */
     object-fit: cover; /* Assurer que l'image s'adapte au conteneur */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -671,32 +672,23 @@ footer {
         right: 10px;
     }
 }
-.sections-container1 {
-    display: flex; /* Place les éléments en ligne */
-    gap: 20px; /* Espace entre les sections */
-    flex-wrap: wrap; /* Permet aux sections de passer à la ligne si l'espace est insuffisant */
-    justify-content: space-between; /* Ajuste l'espacement horizontal */
-}
 
-.creative-process {
-    flex: 1; /* Permet aux sections de prendre une largeur égale */
-    padding: 15px;
-    background-color: #f9f9f9; /* Couleur de fond pour distinguer les sections */
-    border: 1px solid #ddd; /* Bordure légère */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Assure deux colonnes de taille automatique */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+    gap: 20px; /* Espace entre les items */
+  }
+  
+  .grid-item {
+    text-align: center; /* Centre le texte dans chaque item */
+    max-width: 400px; /* Optionnel, limite la largeur des items pour une meilleure lisibilité */
+  }
+  
 
-.creative-process h3 {
-    margin-bottom: 10px; /* Espacement sous le titre */
-}
-
-.creative-process p {
-    line-height: 1.6; /* Lisibilité améliorée */
-}
 @media (max-width: 768px) {
-    .sections-container1 {
-        flex-direction: column; /* Empile les sections verticalement */
-        gap: 15px; /* Réduit l'espace entre les sections */
-    }
+  .grid-container {
+    grid-template-columns: 1fr; /* Une seule colonne sur les écrans plus petits */
+  }
 }
